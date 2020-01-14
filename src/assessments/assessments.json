@@ -2,7 +2,7 @@
   "questions": [
     {
       "question": "What is the capital of Massachusetts?",
-      "options": [
+      "possibleAnswers": [
         {
           "id": 1,
           "value": "Boston"
@@ -20,12 +20,12 @@
           "value": "Stockbridge"
         }
       ],
-      "answer": 1,
+      "correctAnswer": 1,
       "id": 1
     },
     {
       "question": "What is the most populous state in the United States?",
-      "options": [
+      "possibleAnswers": [
         {
           "id": 1,
           "value": "New York"
@@ -43,12 +43,12 @@
           "value": "California"
         }
       ],
-      "answer": 4,
+      "correctAnswer": 4,
       "id": 2
     },
     {
       "question": "Which is the longest river?",
-      "options": [
+      "possibleAnswers": [
         {
           "id": 1,
           "value": "Charles"
@@ -66,31 +66,32 @@
           "value": "Connecticut"
         }
       ],
-      "answer": 3,
+      "correctAnswer": 3,
       "id": 4
-    }
-  ],
-  "steps": [
+    },
     {
       "id": 3,
-      "question": "What is ${equation}?",
-      "equation": "2 + 2",
-      "options": "input",
-      "answer": 4,
-      "following": [
+      "instructions": "Solve this problem",
+      "steps": [
         {
-          "question": "What is ${previous} x 3?",
-          "equation": "${previous} * 3",
-          "options": "input",
-          "answer": 12
+          "question": "What is 2 + 2?",
+          "possibleAnswers": "input",
+          "correctAnswer": 4
         },
         {
-          "question": "What is ${previous} / 4?",
-          "equation": "${previous} / 4",
-          "options": "input",
-          "answer": 3
+          "question": "What is {previous} x 3?",
+          "possibleAnswers": "input",
+          "correctAnswer": 12
+        },
+        {
+          "question": "What is {previous} / 4?",
+          "possibleAnswers": "input",
+          "correctAnswer": 3
         }
       ]
     }
+
+  ],
+  "problems": [
   ]
 }
