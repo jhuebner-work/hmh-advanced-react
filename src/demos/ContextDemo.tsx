@@ -5,7 +5,7 @@ export interface ContextDemoState {
   sendMessage: (message?: string) => void;
 }
 
-const DemoContext = React.createContext({
+const DemoContext = React.createContext<ContextDemoState>({
   message: '',
   sendMessage: () => {},
 });

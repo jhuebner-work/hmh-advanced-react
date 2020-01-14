@@ -1,0 +1,96 @@
+{
+  "questions": [
+    {
+      "question": "What is the capital of Massachusetts?",
+      "options": [
+        {
+          "id": 1,
+          "value": "Boston"
+        },
+        {
+          "id": 2,
+          "value": "Montpelier"
+        },
+        {
+          "id": 3,
+          "value": "Worcester"
+        },
+        {
+          "id": 4,
+          "value": "Stockbridge"
+        }
+      ],
+      "answer": 1,
+      "id": 1
+    },
+    {
+      "question": "What is the most populous state in the United States?",
+      "options": [
+        {
+          "id": 1,
+          "value": "New York"
+        },
+        {
+          "id": 2,
+          "value": "Massachusetts"
+        },
+        {
+          "id": 3,
+          "value": "Texas"
+        },
+        {
+          "id": 4,
+          "value": "California"
+        }
+      ],
+      "answer": 4,
+      "id": 2
+    },
+    {
+      "question": "Which is the longest river?",
+      "options": [
+        {
+          "id": 1,
+          "value": "Charles"
+        },
+        {
+          "id": 2,
+          "value": "Schuykill"
+        },
+        {
+          "id": 3,
+          "value": "Hudson"
+        },
+        {
+          "id": 4,
+          "value": "Connecticut"
+        }
+      ],
+      "answer": 3,
+      "id": 4
+    }
+  ],
+  "steps": [
+    {
+      "id": 3,
+      "question": "What is ${equation}?",
+      "equation": "2 + 2",
+      "options": "input",
+      "answer": 4,
+      "following": [
+        {
+          "question": "What is ${previous} x 3?",
+          "equation": "${previous} * 3",
+          "options": "input",
+          "answer": 12
+        },
+        {
+          "question": "What is ${previous} / 4?",
+          "equation": "${previous} / 4",
+          "options": "input",
+          "answer": 3
+        }
+      ]
+    }
+  ]
+}

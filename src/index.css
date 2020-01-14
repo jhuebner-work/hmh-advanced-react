@@ -8,3 +8,11 @@
 .selected {
   background-color: yellow;
 }
+
+.switch-wrapper {
+  /* position: relative; */
+}
+
+.switch-wrapper > div {
+  /* position: absolute; */
+}
