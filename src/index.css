@@ -1,0 +1,10 @@
+@import url('../node_modules/bulma/css/bulma.css');
+@import url('../node_modules/bulma-helpers/css/bulma-helpers.css');
+
+.title-border {
+  border-bottom: 3px gray solid;
+}
+
+.selected {
+  background-color: yellow;
+}
