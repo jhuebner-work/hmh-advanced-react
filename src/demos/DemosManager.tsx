@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import ReduxCounter from './ReduxCounter';
+import ContextDemo from './ContextDemo';
 
 function DemosManager() {
   return (
@@ -14,6 +15,14 @@ function DemosManager() {
       <div className="columns">
         <div className="column is-one-fifth">
           <ul>
+          <li>
+              <NavLink
+                activeClassName="has-text-weight-bold"
+                to="/demos/context-demo"
+              >
+                Context Demo
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 activeClassName="has-text-weight-bold"
@@ -26,6 +35,7 @@ function DemosManager() {
         </div>
         <div className="column">
           <Route path="/demos/redux-counter" component={ReduxCounter} />
+          <Route path="/demos/context-demo" component={ContextDemo} />
         </div>
       </div>
     </div>
