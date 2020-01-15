@@ -3,6 +3,8 @@ import dao from './assessments-dao';
 import { Problem } from './assessment-types';
 import ProblemView from './ProblemView';
 import ProblemNavigator from './ProblemNavigator';
+import AssessmentsContext, { AssessmentsContextState } from './AssessmentsContext';
+import * as lodash from 'lodash';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function fetchProblems(setProblems: any) {
@@ -18,6 +20,17 @@ async function fetchProblems(setProblems: any) {
 
 function AssessmentsManager() {
   const [problems, setProblems] = useState<Problem[]>([]);
+  const {Provider} = AssessmentsContext;
+  const contextValue: AssessmentsContextState = {
+    responses: {},
+    recordResponse: function(response)  {
+      lodash.set(
+        this.responses,
+        [response.problemId,response.questionId],
+        response.StudentResponse
+      )
+    }
+  }
 
   useEffect(() => {
     dao

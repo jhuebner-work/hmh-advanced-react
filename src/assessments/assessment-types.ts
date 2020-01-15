@@ -1,4 +1,8 @@
-export type StudentResponse = string | number;
+export type StudentResponse = {
+  problemId: number;
+  questionId: number;
+  StudentResponse: string;
+}
 
 export interface Question {
   questionText: string;

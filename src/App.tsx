@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <Router>
         <main className="section is-fluid">
         <header className="container has-text-centered">
-            <h1 className="title is-1">HMH Banking System</h1>
+            <h1 className="title is-1">HMH Engineering Interview Questions</h1>
             <div className="title-border"></div>
           </header>
           <div className="container">
