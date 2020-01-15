@@ -3,10 +3,12 @@ import { Question } from './assessment-types';
 
 interface QuestionViewProps {
   question: Question;
+  problemId: number;
 }
 
 function QuestionView({
   question: { questionText, id, possibleAnswers },
+  problemId,
 }: QuestionViewProps) {
   return (
     <div className="question">
@@ -16,15 +18,17 @@ function QuestionView({
           <input type="text" name="" id="" />
         </>
       ) : (
-        <div>
+        <>
+          <div>{questionText}</div>
           {possibleAnswers.map(answer => (
-            <div className="control">
+            <div className="control" key={answer.id}>
               <label className="radio" htmlFor="">
-                <input type="radio" name="" id="" /> {answer.value}
+                <input type="radio" name={`${problemId}-${id}`} id="" />{' '}
+                {answer.value}
               </label>
             </div>
           ))}
-        </div>
+        </>
       )}
     </div>
   );

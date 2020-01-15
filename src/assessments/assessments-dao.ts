@@ -1,4 +1,5 @@
-import { Question, Problem } from './assessment-types';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Problem } from './assessment-types';
 
 const baseUrl = 'http://localhost:8001/problems/';
 
