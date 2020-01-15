@@ -6,10 +6,9 @@ import AssessmentsContext from './AssessmentsContext';
 
 interface ProblemViewProps {
   problem: Problem;
-  responseFromStudent?: (response: StudentResponse) => {};
 }
 
-function ProblemView({ responseFromStudent, problem }: ProblemViewProps) {
+function ProblemView({ problem }: ProblemViewProps) {
   return (
     <div>
       {problem.instructions && (
@@ -21,7 +20,7 @@ function ProblemView({ responseFromStudent, problem }: ProblemViewProps) {
           <div hidden={problem.steps.length < 2}>
             [{index + 1} of {problem.steps.length} steps]
           </div>
-          <QuestionView question={step} problemId={problem.id} />
+          {/* Plugged-in QuestionView will go here */}
         </div>
       ))}
 

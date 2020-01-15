@@ -27,7 +27,6 @@ function AssessmentsManager() {
   const contextValue: AssessmentsContextState = {
     responses: {},
     recordResponse: function(response) {
-      console.log('response: ', response);
       lodash.set(
         contextValue.responses,
         // [response.problemId, response.questionId],
@@ -35,7 +34,6 @@ function AssessmentsManager() {
         [`${response.problemId}`, `${response.questionId}`],
         response.studentResponse,
       );
-      console.log('this.responses: ', contextValue.responses);
     },
   };
 

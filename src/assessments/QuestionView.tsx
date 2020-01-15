@@ -1,17 +1,17 @@
 import React, { useState, useContext } from 'react';
-import { Question } from './assessment-types';
-import AssessmentsContext from './AssessmentsContext';
+import { Question, StudentResponse } from './assessment-types';
 
 interface QuestionViewProps {
   question: Question;
   problemId: string;
+  recordResponse: (response: StudentResponse) => void;
 }
 
 function QuestionView({
   question: { questionText, id, possibleAnswers },
   problemId,
+  recordResponse
 }: QuestionViewProps) {
-  const context = useContext(AssessmentsContext);
 
   return (
     <div className="question">
@@ -31,13 +31,13 @@ function QuestionView({
                   name={`${problemId}-${id}`}
                   value={answer.id}
                   onChange={() =>
-                    context.recordResponse({
+                    recordResponse({
                       problemId: problemId,
                       questionId: id,
                       studentResponse: answer.id,
                     })
                   }
-                />{' '}
+                />
                 {answer.value}
               </label>
             </div>
