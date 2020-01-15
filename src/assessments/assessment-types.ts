@@ -1,11 +1,11 @@
-export type Response = string | number;
+export type StudentResponse = string | number;
 
 export interface Question {
-  question: string;
+  questionText: string;
   id: number;
-  correctAnswer: Response;
+  correctAnswer: StudentResponse;
   possibleAnswers: 'input' | { id: number; value: string }[];
-  studentAnswer?: Response;
+  studentAnswer?: StudentResponse;
 }
 
 export interface Problem {
