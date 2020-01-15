@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from './create-store';
 import DemosManager from './demos/DemosManager';
+import AssessmentsManager from './assessments/AssessmentsManager';
 
 const App: React.FC = () => {
   return (
@@ -22,11 +23,17 @@ const App: React.FC = () => {
                     Demos
                   </Link>
                 </div>
+                <div className="navbar-item">
+                  <Link to="/assessments" className="has-text-white">
+                    Assessments
+                  </Link>
+                </div>
               </div>
             </nav>
           </div>
           <section className="container">
             <Route path="/demos" component={DemosManager} />
+            <Route path="/assessments" component={AssessmentsManager} />
           </section>
         </main>
       </Router>
