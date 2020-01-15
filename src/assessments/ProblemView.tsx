@@ -2,6 +2,7 @@ import React from 'react';
 import { Problem, StudentResponse } from './assessment-types';
 import QuestionView from './QuestionView';
 import NavigationButtons from './NavigationButtons';
+import AssessmentsContext from './AssessmentsContext';
 
 interface ProblemViewProps {
   problem: Problem;

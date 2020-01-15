@@ -1,11 +1,11 @@
 {
   "problems": [
     {
-      "id": 1,
+      "id": "p1",
       "steps": [
         {
           "questionText": "What is the capital of Massachusetts?",
-          "id": 1,
+          "id": "q1",
           "possibleAnswers": [
             {
               "id": 1,
@@ -29,10 +29,10 @@
       ]
     },
     {
-      "id": 2,
+      "id": "p2",
       "steps": [
         {
-          "id": 2,
+          "id": "q2",
           "questionText": "What is the most populous state in the United States?",
           "possibleAnswers": [
             {
@@ -57,10 +57,10 @@
       ]
     },
     {
-      "id": 4,
+      "id": "p4",
       "steps": [
         {
-          "id": 3,
+          "id": "q3",
           "questionText": "Which is the longest river?",
           "possibleAnswers": [
             {
@@ -85,23 +85,23 @@
       ]
     },
     {
-      "id": 3,
+      "id": "p3",
       "instructions": "Solve this problem",
       "steps": [
         {
-          "id": 4,
+          "id": "q4",
           "questionText": "What is 2 + 2?",
           "possibleAnswers": "input",
           "correctAnswer": 4
         },
         {
-          "id": 5,
+          "id": "q5",
           "questionText": "What is {previous} x 3?",
           "possibleAnswers": "input",
           "correctAnswer": 12
         },
         {
-          "id": 6,
+          "id": "q6",
           "questionText": "What is {previous} / 4?",
           "possibleAnswers": "input",
           "correctAnswer": 3

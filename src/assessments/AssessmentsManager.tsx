@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import dao from './assessments-dao';
 import { Problem } from './assessment-types';
 import ProblemView from './ProblemView';
 import ProblemNavigator from './ProblemNavigator';
+import AssessmentsContext, {
+  AssessmentsContextState,
+} from './AssessmentsContext';
+import * as lodash from 'lodash';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function fetchProblems(setProblems: any) {
@@ -18,6 +22,22 @@ async function fetchProblems(setProblems: any) {
 
 function AssessmentsManager() {
   const [problems, setProblems] = useState<Problem[]>([]);
+  const { Provider } = AssessmentsContext;
+
+  const contextValue: AssessmentsContextState = {
+    responses: {},
+    recordResponse: function(response) {
+      console.log('response: ', response);
+      lodash.set(
+        contextValue.responses,
+        // [response.problemId, response.questionId],
+        // `${response.problemId}.${response.questionId}`,
+        [`${response.problemId}`, `${response.questionId}`],
+        response.studentResponse,
+      );
+      console.log('this.responses: ', contextValue.responses);
+    },
+  };
 
   useEffect(() => {
     dao
@@ -37,17 +57,19 @@ function AssessmentsManager() {
   */
 
   return (
-    <div>
-      <h2 className="is-size-3 has-margin-bottom-10">Assessments Manager</h2>
-      <div className="columns">
-        <div className="column">
-          <ProblemNavigator />
-        </div>
-        <div className="column is-three-quarters">
-          {problems.length && <ProblemView problem={problems[0]} />}
+    <Provider value={contextValue}>
+      <div>
+        <h2 className="is-size-3 has-margin-bottom-10">Assessments Manager</h2>
+        <div className="columns">
+          <div className="column">
+            <ProblemNavigator />
+          </div>
+          <div className="column is-three-quarters">
+            {problems.length && <ProblemView problem={problems[0]} />}
+          </div>
         </div>
       </div>
-    </div>
+    </Provider>
   );
 }
 

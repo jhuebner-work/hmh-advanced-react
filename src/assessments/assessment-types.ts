@@ -1,15 +1,20 @@
-export type StudentResponse = string | number;
+export type Answer = string | number;
+
+export interface StudentResponse {
+  problemId: string;
+  questionId: string;
+  studentResponse: Answer;
+}
 
 export interface Question {
   questionText: string;
-  id: number;
-  correctAnswer: StudentResponse;
+  id: string;
+  correctAnswer: Answer;
   possibleAnswers: 'input' | { id: number; value: string }[];
-  studentAnswer?: StudentResponse;
 }
 
 export interface Problem {
-  id: number;
+  id: string;
   instructions?: string;
   steps: Question[];
 }
