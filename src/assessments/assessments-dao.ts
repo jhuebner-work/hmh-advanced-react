@@ -1,20 +1,20 @@
-import { Question } from './assessment-types';
+import { Question, Problem } from './assessment-types';
 
-const baseUrl = 'http://localhost:8001/questions/';
+const baseUrl = 'http://localhost:8001/problems/';
 
-async function getAllQuestions() {
-  let questions: Question[] = [];
+async function getAllProblems() {
+  let problems: Problem[] = [];
   try {
     const response = await fetch(baseUrl);
     if (response.ok) {
-      questions = await response.json();
+      problems = await response.json();
     } else {
       throw new Error(
         `Bad HTTP status code: ${response.status} ${response.statusText}`,
       );
     }
 
-    return questions;
+    return problems;
   } catch (e) {
     // Could test e instanceof SyntaxError to catch JSON.parse() errors
     console.error('e', e);
@@ -31,7 +31,7 @@ function getQuestionById(id: string) {}
 function respondToQuestion(id: string, response: Response) {}
 
 const dao = {
-  getAllQuestions
+  getAllProblems
 };
 
 export default dao;

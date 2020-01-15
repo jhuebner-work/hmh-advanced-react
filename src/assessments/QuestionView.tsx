@@ -18,9 +18,10 @@ function QuestionView({
       ) : (
         <div>
           {possibleAnswers.map(answer => (
-            <div>
-              <input type="radio" name="" id="" />
-              <label htmlFor="">{answer.value}</label>
+            <div className="control">
+              <label className="radio" htmlFor="">
+                <input type="radio" name="" id="" /> {answer.value}
+              </label>
             </div>
           ))}
         </div>

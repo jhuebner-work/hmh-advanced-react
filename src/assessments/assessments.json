@@ -1,95 +1,112 @@
 {
-  "questions": [
+  "problems": [
     {
-      "question": "What is the capital of Massachusetts?",
-      "possibleAnswers": [
+      "id": 1,
+      "steps": [
         {
+          "questionText": "What is the capital of Massachusetts?",
           "id": 1,
-          "value": "Boston"
-        },
-        {
-          "id": 2,
-          "value": "Montpelier"
-        },
-        {
-          "id": 3,
-          "value": "Worcester"
-        },
-        {
-          "id": 4,
-          "value": "Stockbridge"
+          "possibleAnswers": [
+            {
+              "id": 1,
+              "value": "Boston"
+            },
+            {
+              "id": 2,
+              "value": "Montpelier"
+            },
+            {
+              "id": 3,
+              "value": "Worcester"
+            },
+            {
+              "id": 4,
+              "value": "Stockbridge"
+            }
+          ],
+          "correctAnswer": 1
         }
-      ],
-      "correctAnswer": 1,
-      "id": 1
+      ]
     },
     {
-      "question": "What is the most populous state in the United States?",
-      "possibleAnswers": [
-        {
-          "id": 1,
-          "value": "New York"
-        },
+      "id": 2,
+      "steps": [
         {
           "id": 2,
-          "value": "Massachusetts"
-        },
-        {
-          "id": 3,
-          "value": "Texas"
-        },
-        {
-          "id": 4,
-          "value": "California"
+          "questionText": "What is the most populous state in the United States?",
+          "possibleAnswers": [
+            {
+              "id": 1,
+              "value": "New York"
+            },
+            {
+              "id": 2,
+              "value": "Massachusetts"
+            },
+            {
+              "id": 3,
+              "value": "Texas"
+            },
+            {
+              "id": 4,
+              "value": "California"
+            }
+          ],
+          "correctAnswer": 4
         }
-      ],
-      "correctAnswer": 4,
-      "id": 2
+      ]
     },
     {
-      "question": "Which is the longest river?",
-      "possibleAnswers": [
-        {
-          "id": 1,
-          "value": "Charles"
-        },
-        {
-          "id": 2,
-          "value": "Schuykill"
-        },
+      "id": 4,
+      "steps": [
         {
           "id": 3,
-          "value": "Hudson"
-        },
-        {
-          "id": 4,
-          "value": "Connecticut"
+          "questionText": "Which is the longest river?",
+          "possibleAnswers": [
+            {
+              "id": 1,
+              "value": "Charles"
+            },
+            {
+              "id": 2,
+              "value": "Schuykill"
+            },
+            {
+              "id": 3,
+              "value": "Hudson"
+            },
+            {
+              "id": 4,
+              "value": "Connecticut"
+            }
+          ],
+          "correctAnswer": 3
         }
-      ],
-      "correctAnswer": 3,
-      "id": 4
+      ]
     },
     {
       "id": 3,
       "instructions": "Solve this problem",
       "steps": [
         {
-          "question": "What is 2 + 2?",
+          "id": 4,
+          "questionText": "What is 2 + 2?",
           "possibleAnswers": "input",
           "correctAnswer": 4
         },
         {
-          "question": "What is {previous} x 3?",
+          "id": 5,
+          "questionText": "What is {previous} x 3?",
           "possibleAnswers": "input",
           "correctAnswer": 12
         },
         {
-          "question": "What is {previous} / 4?",
+          "id": 6,
+          "questionText": "What is {previous} / 4?",
           "possibleAnswers": "input",
           "correctAnswer": 3
         }
       ]
     }
-
   ]
 }
